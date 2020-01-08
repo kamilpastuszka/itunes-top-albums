@@ -42,3 +42,18 @@ img {
     color: white;
     transform: rotateY(180deg);
 }
+
+.rank {
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+    background-color: black;
+    color: white;
+    position: absolute;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
