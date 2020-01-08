@@ -6,8 +6,13 @@ interface Props {
 
 const Album: React.FC<Props> = ({ image }) => {
     return (
-        <div className="row">
-            <img alt="none" src={image} />
+        <div className="album-container">
+            <div className="flip-card">
+                <div className="flip-card_front">
+                    <img alt="none" src={image} />
+                </div>
+                <div className="flip-card_back"></div>
+            </div>
         </div>
     );
 };
