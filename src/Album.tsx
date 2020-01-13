@@ -2,10 +2,13 @@ import React from 'react';
 
 interface Props {
     image: string;
+    author: string;
+    name: string;
+    released: string;
     rank: number;
 }
 
-const Album: React.FC<Props> = ({ image, rank }) => {
+const Album: React.FC<Props> = ({ image, rank, name, author, released }) => {
     return (
         <div className="album-container">
             <div className="flip-card">
@@ -15,7 +18,11 @@ const Album: React.FC<Props> = ({ image, rank }) => {
                     </div>
                     <img alt="none" src={image} />
                 </div>
-                <div className="flip-card_back"></div>
+                <div className="flip-card_back">
+                    <div>{name}</div>
+                    <div>{author}</div>
+                    <div>{released}</div>
+                </div>
             </div>
         </div>
     );

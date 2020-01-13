@@ -21,7 +21,16 @@ const Albums: React.FC = () => {
             <div className="row">
                 {albums.map((album, i) => {
                     const rank = 1;
-                    return <Album image={album['im:image'][2].label} key={i} rank={rank + i} />;
+                    return (
+                        <Album
+                            image={album['im:image'][2].label}
+                            name={album['im:name'].label}
+                            author={album['im:artist'].label}
+                            released={album['im:releaseDate'].label}
+                            key={i}
+                            rank={rank + i}
+                        />
+                    );
                 })}
             </div>
         );
