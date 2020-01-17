@@ -8,7 +8,7 @@ interface Props {
     rank: number;
 }
 
-const Album: React.FC<Props> = ({ image, rank, name, author, released }) => {
+const Album: React.FC<Props> = ({ image, rank, name, author, released }: Props) => {
     return (
         <div className="album-container">
             <div className="flip-card">
@@ -21,7 +21,7 @@ const Album: React.FC<Props> = ({ image, rank, name, author, released }) => {
                 <div className="flip-card_back">
                     <div>{name}</div>
                     <div>{author}</div>
-                    <div>{released}</div>
+                    <div> {released}</div>
                 </div>
             </div>
         </div>
